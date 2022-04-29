@@ -10,12 +10,62 @@
 body {
     display: grid;
     grid: 1fr 4fr / 1fr 5fr;
+    height: 100vh;
 }
 
+/* Header styles */
 .header {
+    grid-area: 1 / 2 / 2 / 3;
+    display: grid;
+    grid: 1fr 2fr / 2fr 1fr;
+}
+
+.profile-main {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.profile-sub {
     grid-area: 1 / 2 / 2 / 3;
 }
 
+.search {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.nav-bar {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+/* Sidebar styles */
 .sidebar {
     grid-area: 1 / 1 / 3 / 2;
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+    height: 100vh;
+    padding-left: 16px;
+}
+
+.sidebar-options {
+    display: grid;
+    align-items: flex-start;
+    height: 60vh;
+}
+
+/* Content area styles */
+.content-area {
+    grid-area: 2 / 2 / 3 / 3;
+    display: grid;
+    grid: 1fr 1fr / 3fr 1fr;
+}
+
+.projects {
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+.announcements {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.trending {
+    grid-area: 2 / 2 / 3 / 3;
 }
