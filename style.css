@@ -12,7 +12,7 @@ body {
     grid: 1fr 4fr / 1fr 5fr;
     height: 100vh;
     width: 100VW;
-    background-color: rgb(185, 200, 213);
+    background-color: rgb(214, 225, 235);
 }
 
 /* Header styles */
@@ -24,10 +24,13 @@ body {
     gap: 12px;
     padding: 16px 28px 16px 28px;
     background-color: white;
+    box-shadow: 3px 3px 3px rgb(162, 161, 161);
+    z-index: 1;
 }
 
 .header .icon {
     height: 2rem;
+    
 }
 
 .search-bar {
@@ -41,7 +44,7 @@ body {
     height: 1.6rem;
     border-radius: 6px;
     max-width: 600px;
-    background-color: rgb(185, 200, 213);
+    background-color: rgb(214, 225, 235);
     border: none;
 }
 
@@ -184,18 +187,20 @@ body {
     height: 2rem;
 }
 
-
-
 /* Content area styles */
 .content-area {
     grid-area: 2 / 2 / 3 / 3;
     display: grid;
     grid: 3rem 1fr 3rem 1fr / 3fr 1fr;
-    padding: 24px 24px 48px 24px;
-    background-color: rgb(185, 200, 213);
+    padding: 16px 24px 16px 24px;
+    background-color: rgb(214, 225, 235);
     gap: 0px 24px;
     max-height: 805px;
     overflow-y: scroll;
+}
+
+.content-area p {
+    color: rgb(107, 103, 103);
 }
 
 .projects {
@@ -209,8 +214,16 @@ body {
     display: grid;
     grid-template-rows: 1.4rem 1fr 2.8rem;
     padding: 28px 16px 28px 16px;
+    border-radius: 8px;
     background-color: white;
+    border-left: 8px solid rgb(248, 201, 60);
+    box-shadow: 3px 3px 3px rgb(162, 161, 161);
 }
+
+.icons img {
+    margin-left: 12px;
+}
+
 .project-card div {
     width: 250px;
     justify-self: flex-end;
@@ -224,8 +237,16 @@ body {
     grid-template-rows: repeat(3, 1fr);
     background-color: white;
     align-items: center;
+    border-radius: 8px;
     max-height: 350px;
     padding: 16px;
+    margin-bottom: 24px;
+    box-shadow: 3px 3px 3px rgb(162, 161, 161);
+}
+
+.announcements div:first-child, .announcements div:nth-child(2) {
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgb(201, 193, 193);
 }
 
 .trending {
@@ -233,8 +254,11 @@ body {
     display: grid;
     grid-template-rows: repeat(4, 1fr);
     background-color: white;
+    border-radius: 8px;
     max-height: 350px;
     padding: 16px;
+    gap: 12px;
+    box-shadow: 3px 3px 3px rgb(162, 161, 161);
 }
 
 .trending-user {
@@ -243,6 +267,13 @@ body {
     align-items: center;
     justify-content: flex-start;
     background-color: white;
+    gap: 16px;
+}
+
+.text p:first-child {
+    color: black;
+    font-weight: 500;
+    margin-bottom: 4px;
 }
 
 .trending-user .picture {
